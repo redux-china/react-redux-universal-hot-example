@@ -69,7 +69,7 @@ export default class WidgetForm extends Component {
           <button className="btn btn-default"
                   onClick={() => editStop(formKey)}
                   disabled={submitting}>
-            <i className="fa fa-ban"/> Cancel
+            <i className="fa fa-ban"/> 取消
           </button>
           <button className="btn btn-success"
                   onClick={handleSubmit(() => save(values)
@@ -80,7 +80,7 @@ export default class WidgetForm extends Component {
                     })
                   )}
                   disabled={pristine || invalid || submitting}>
-            <i className={'fa ' + (submitting ? 'fa-cog fa-spin' : 'fa-cloud')}/> Save
+            <i className={'fa ' + (submitting ? 'fa-cog fa-spin' : 'fa-cloud')}/> 保存
           </button>
           {saveError && <div className="text-danger">{saveError}</div>}
         </td>

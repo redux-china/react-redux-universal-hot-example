@@ -5,7 +5,7 @@ export default class NotFound extends Component {
     return (
       <div className="container">
         <h1>Doh! 404!</h1>
-        <p>These are <em>not</em> the droids you are looking for!</p>
+        <p>该页不存在哦!</p>
       </div>
     );
   }

@@ -4,13 +4,13 @@ import DocumentMeta from 'react-document-meta';
 const cdn = '//cdnjs.cloudflare.com/ajax/libs/';
 
 /**
- * Wrapper component containing HTML metadata and boilerplate tags.
- * Used in server-side code only to wrap the string output of the
- * rendered route component.
+ * 包含HTML元数据和样板标签包装组件.
+ * 用于服务器端代码只包裹的字符串输出
+ * 呈现路线的组成部分。
  *
- * The only thing this component doesn't (and can't) include is the
- * HTML doctype declaration, which is added to the rendered output
- * by the server.js file.
+ * 该组件没有（也不可能）包括的唯一的事情就是
+ * HTML文档类型声明，这是添加到渲染输出
+ * 由server.js文件.
  */
 export default class Html extends Component {
   static propTypes = {

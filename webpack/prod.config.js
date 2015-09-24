@@ -1,4 +1,4 @@
-// Webpack config for creating the production bundle.
+// WebPACK中配置用于创建产品包
 
 var path = require('path');
 var webpack = require('webpack');

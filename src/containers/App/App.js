@@ -108,7 +108,7 @@ export default class App extends Component {
               {user && <li className="logout-link"><a href="/logout" onClick={::this.handleLogout}>退出</a></li>}
             </ul>
             {user &&
-            <p className={styles.loggedInMessage + ' navbar-text'}>Logged in as <strong>{user.name}</strong>.</p>}
+            <p className={styles.loggedInMessage + ' navbar-text'}>登录名： <strong>{user.name}</strong></p>}
             <ul className="nav navbar-nav navbar-right">
               <li>
                 <a href="https://github.com/erikras/react-redux-universal-hot-example"

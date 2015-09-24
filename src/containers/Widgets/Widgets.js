@@ -56,19 +56,17 @@ class Widgets extends Component {
     return (
       <div className={styles.widgets + ' container'}>
         <h1>
-          Widgets
+          小工具
           <button className={styles.refreshBtn + ' btn btn-success'} onClick={load}><i
-            className={refreshClassName}/> {' '} Reload Widgets
+            className={refreshClassName}/> {' '} 刷新小工具
           </button>
         </h1>
         <DocumentMeta title="React Redux Example: Widgets"/>
         <p>
-          This data was loaded from the server before this route was rendered. If you hit refresh on your browser, the
-          data loading will take place on the server before the page is returned. If you navigated here from another
-          page, the data was fetched from the client.
+          这个数据从服务器上加载此路线被渲染了。如果你打刷新您的浏览器，数据加载将发生在服务器上返回页面之前。如果从另一个页面的导航，数据是从客户端获取。
         </p>
         <p>
-          This widgets are stored in your session, so feel free to edit it and refresh.
+          这个小工具都存储在您的会话，可以随意编辑和刷新。
         </p>
         {error &&
         <div className="alert alert-danger" role="alert">
@@ -81,9 +79,9 @@ class Widgets extends Component {
           <thead>
           <tr>
             <th className={styles.idCol}>ID</th>
-            <th className={styles.colorCol}>Color</th>
-            <th className={styles.sprocketsCol}>Sprockets</th>
-            <th className={styles.ownerCol}>Owner</th>
+            <th className={styles.colorCol}>演示</th>
+            <th className={styles.sprocketsCol}> 链轮齿</th>
+            <th className={styles.ownerCol}>物主</th>
             <th className={styles.buttonCol}></th>
           </tr>
           </thead>
@@ -98,7 +96,7 @@ class Widgets extends Component {
                 <td className={styles.ownerCol}>{widget.owner}</td>
                 <td className={styles.buttonCol}>
                   <button className="btn btn-primary" onClick={::this.handleEdit(widget)}>
-                    <i className="fa fa-pencil"/> Edit
+                    <i className="fa fa-pencil"/> 编辑
                   </button>
                 </td>
               </tr>)
@@ -109,4 +107,3 @@ class Widgets extends Component {
     );
   }
 }
-

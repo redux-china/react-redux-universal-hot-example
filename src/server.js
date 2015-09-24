@@ -23,12 +23,12 @@ app.use(favicon(path.join(__dirname, '..', 'static', 'favicon.ico')));
 
 app.use(require('serve-static')(path.join(__dirname, '..', 'static')));
 
-// Proxy to API server
+// 代理API服务器
 app.use('/api', (req, res) => {
   proxy.web(req, res);
 });
 
-// added the error handling to avoid https://github.com/nodejitsu/node-http-proxy/issues/527
+// 添加了错误处理，以避免 https://github.com/nodejitsu/node-http-proxy/issues/527
 proxy.on('error', (error, req, res) => {
   let json;
   console.log('proxy error', error);
@@ -42,8 +42,8 @@ proxy.on('error', (error, req, res) => {
 
 app.use((req, res) => {
   if (__DEVELOPMENT__) {
-    // Do not cache webpack stats: the script file would change since
-    // hot module replacement is enabled in the development env
+    // 不缓存的WebPack统计：因为脚本文件会改变
+    // 热模块更换是在 development 开发者模式 ENV启用
     webpackIsomorphicTools.refresh();
   }
   const client = new ApiClient(req);
@@ -74,7 +74,7 @@ app.use((req, res) => {
           return;
         }
         console.error('ROUTER ERROR:', pretty.render(error));
-        hydrateOnClient(); // let client render error page or re-request data
+        hydrateOnClient(); // 让客户端渲染错误页面或重新请求的数据
       });
   }
 });

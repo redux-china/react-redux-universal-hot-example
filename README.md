@@ -7,7 +7,7 @@
 [![devDependency Status](https://david-dm.org/erikras/react-redux-universal-hot-example/dev-status.svg)](https://david-dm.org/erikras/react-redux-universal-hot-example#info=devDependencies)
 [![PayPal donate button](http://img.shields.io/paypal/donate.png?color=yellowgreen)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E2LK57ZQ9YRMN)
 
---- 
+---
 
 ## About
 
@@ -53,14 +53,12 @@ npm run build
 npm run start
 ```
 
-## Demo
 
-A demonstration of this app can be seen [running on heroku](https://react-redux.herokuapp.com), which is a deployment of the [heroku branch](https://github.com/erikras/react-redux-universal-hot-example/tree/heroku).
 
 ## Explanation
 
-What initally gets run is `bin/server.js`, which does little more than enable ES6 and ES7 awesomeness in the 
-server-side node code. It then initiates `server.js`. In `server.js` we proxy any requests to `/api/*` to the 
+What initally gets run is `bin/server.js`, which does little more than enable ES6 and ES7 awesomeness in the
+server-side node code. It then initiates `server.js`. In `server.js` we proxy any requests to `/api/*` to the
 [API server](#api-server), running at `localhost:3030`. All the data fetching calls from the client go to `/api/*`.
 Aside from serving the favicon and static content from `/static`, the only thing `server.js` does is initiate delegate
 rendering to `react-router`. At the bottom of `server.js`, we listen to port `3000` and initiate the API server.
@@ -92,7 +90,7 @@ The middleware, [`clientMiddleware.js`](https://github.com/erikras/react-redux-u
 
 #### Redux Modules... *What the Duck*?
 
-The `src/redux/modules` folder contains "modules" to help 
+The `src/redux/modules` folder contains "modules" to help
 isolate concerns within a Redux application (aka [Ducks](https://github.com/erikras/ducks-modular-redux), a Redux Style Proposal that I came up with). I encourage you to read the
 [Ducks Docs](https://github.com/erikras/ducks-modular-redux) and provide feedback.
 
@@ -150,17 +148,8 @@ The first deploy might take a while, but after that your `node_modules` dir shou
 
 * [Inline Styles](docs/InlineStyles.md) - CSS is dead.
 
-## FAQ
 
-#### Help! It doesn't work on Windows! What do I do?
-
-Fear not. [chtefi](https://github.com/chtefi) has figured out [what needs to be changed](https://github.com/erikras/react-redux-universal-hot-example/pull/21/files) to make it work on Windows 8.
 
 #### How do I disable the dev tools?
 
 They will only show in development, but if you want to disable them even there, set `__DEVTOOLS__` to `false` in `/webpack/dev.config.js`.
-
----
-Thanks for checking this out.
-
-– Erik Rasmussen, [@erikras](https://twitter.com/erikras)

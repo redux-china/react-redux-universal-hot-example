@@ -5,7 +5,7 @@ export default class RequireLogin extends Component {
     return (nextState, transition) => {
       const { auth: { user }} = store.getState();
       if (!user) {
-        // oops, not logged in, so can't be here!
+        // oops, 没有登录，所以不能在这里！
         transition.to('/');
       }
     };

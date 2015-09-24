@@ -74,16 +74,16 @@ class SurveyForm extends Component {
     return (
       <div>
         <form className="form-horizontal" onSubmit={handleSubmit}>
-          {renderInput(name, 'Full Name')}
-          {renderInput(email, 'Email', true)}
-          {renderInput(occupation, 'Occupation')}
+          {renderInput(name, '用户名')}
+          {renderInput(email, '邮箱', true)}
+          {renderInput(occupation, '职业')}
           <div className="form-group">
             <div className="col-sm-offset-2 col-sm-10">
               <button className="btn btn-success" onClick={handleSubmit}>
-                <i className="fa fa-paper-plane"/> Submit
+                <i className="fa fa-paper-plane"/> 提交
               </button>
               <button className="btn btn-warning" onClick={resetForm} style={{marginLeft: 15}}>
-                <i className="fa fa-undo"/> Reset
+                <i className="fa fa-undo"/> 重置
               </button>
             </div>
           </div>
@@ -119,4 +119,3 @@ class SurveyForm extends Component {
     );
   }
 }
-

@@ -1,4 +1,4 @@
-require('../server.babel'); // babel registration (runtime transpilation for node)
+require('../server.babel'); // babel 注册 (runtime transpilation for node)
 
 import express from 'express';
 import session from 'express-session';
@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 
 
 app.use((req, res) => {
-  
+
   const matcher = req.url.split('?')[0].split('/').slice(1);
 
   let action = false;
@@ -54,7 +54,7 @@ app.use((req, res) => {
         }
       });
   } else {
-    res.status(404).end('NOT FOUND');
+    res.status(404).end('未找到');
   }
 });
 

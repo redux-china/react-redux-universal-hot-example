@@ -1,4 +1,4 @@
-//  enable runtime transpilation to use ES6/7 in node
+//  启用运行时 transpilation to use ES6/7 in node
 
 var fs = require('fs');
 
@@ -8,7 +8,7 @@ var config;
 try {
   config = JSON.parse(babelrc);
 } catch (err) {
-  console.error('==>     ERROR: Error parsing your .babelrc.');
+  console.error('==>     错误：错误解析你.babelrc.');
   console.error(err);
 }
 

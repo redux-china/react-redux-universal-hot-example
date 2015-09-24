@@ -2,8 +2,8 @@ import superagent from 'superagent';
 import config from '../config';
 
 /*
- * This silly underscore is here to avoid a mysterious "ReferenceError: ApiClient is not defined" error.
- * See Issue #14. https://github.com/erikras/react-redux-universal-hot-example/issues/14
+ * 这傻下划线是在这里，以避免神秘“的ReferenceError：ApiClient没有定义”的错误。
+ * 参见问题 #14. https://github.com/erikras/react-redux-universal-hot-example/issues/14
  *
  * Remove it at your own risk.
  */

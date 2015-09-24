@@ -63,7 +63,7 @@ module.exports = {
     extensions: ['', '.json', '.js']
   },
   plugins: [
-    // hot reload
+    // 热加载
     new webpack.HotModuleReplacementPlugin(),
     new webpack.IgnorePlugin(/\.json$/),
     new webpack.DefinePlugin({

@@ -35,20 +35,20 @@ export default class Login extends Component {
     return (
       <div className={styles.loginPage + ' container'}>
         <DocumentMeta title="React Redux Example: Login"/>
-        <h1>Login</h1>
+        <h1>用户登录</h1>
         {!user &&
         <div>
           <form className="login-form" onSubmit={::this.handleSubmit}>
-            <input type="text" ref="username" placeholder="Enter a username"/>
-            <button className="btn btn-success" onClick={::this.handleSubmit}><i className="fa fa-sign-in"/>{' '}Log In
+            <input type="text" ref="username" placeholder="输入登录用户名"/>
+            <button className="btn btn-success" onClick={::this.handleSubmit}><i className="fa fa-sign-in"/>{' '}登录
             </button>
           </form>
-          <p>This will "log you in" as this user, storing the username in the session of the API server.</p>
+          <p>这将模拟一个用户，存储API服务器的会话的用户名。.</p>
         </div>
         }
         {user &&
         <div>
-          <p>You are currently logged in as {user.name}.</p>
+          <p>您目前已登录为 {user.name}.</p>
 
           <div>
             <button className="btn btn-danger" onClick={logout}><i className="fa fa-sign-out"/>{' '}Log Out</button>

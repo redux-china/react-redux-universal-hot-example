@@ -4,20 +4,20 @@ const join = (rules) => value => rules.map(rule => rule(value)).filter(error => 
 export function email(value) {
   // Let's not start a debate on email regex. This is just for an example app!
   if (!isEmpty(value) && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
-    return 'Invalid email address';
+    return '无效的邮件地址';
   }
 }
 
 export function required(value) {
   if (isEmpty(value)) {
-    return 'Required';
+    return '必须填写';
   }
 }
 
 export function minLength(min) {
   return value => {
     if (!isEmpty(value) && value.length < min) {
-      return `Must be at least ${min} characters`;
+      return `必须至少 ${min} 字符`;
     }
   };
 }
@@ -25,21 +25,21 @@ export function minLength(min) {
 export function maxLength(max) {
   return value => {
     if (!isEmpty(value) && value.length > max) {
-      return `Must be no more than ${max} characters`;
+      return `必须不超过 ${max} 字符`;
     }
   };
 }
 
 export function integer(value) {
   if (!Number.isInteger(Number(value))) {
-    return 'Must be an integer';
+    return '必须是整数';
   }
 }
 
 export function oneOf(enumeration) {
   return value => {
     if (!~enumeration.indexOf(value)) {
-      return `Must be one of: ${enumeration.join(', ')}`;
+      return `必须是一个: ${enumeration.join(', ')}`;
     }
   };
 }

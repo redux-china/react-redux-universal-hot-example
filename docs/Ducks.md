@@ -1,3 +1,3 @@
-This document has found [another, hopefully permanent, home](https://github.com/erikras/ducks-modular-redux).
+This document has found [another, hopefully permanent, home](https://github.com/redux-china/react-redux-universal-hot-example).
 
 Quack.

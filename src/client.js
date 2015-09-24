@@ -1,5 +1,5 @@
 /**
- * THIS IS THE ENTRY POINT FOR THE CLIENT, JUST LIKE server.js IS THE ENTRY POINT FOR THE SERVER.
+ * 这就是切入点客户端，就像server.js的切入点对于服务器.
  */
 import 'babel/polyfill';
 import React from 'react';
@@ -35,10 +35,10 @@ universalRouter(location, history, store)
 
 
 if (process.env.NODE_ENV !== 'production') {
-  window.React = React; // enable debugger
+  window.React = React; // 启用调试
   const reactRoot = window.document.getElementById('content');
 
   if (!reactRoot || !reactRoot.firstChild || !reactRoot.firstChild.attributes || !reactRoot.firstChild.attributes['data-react-checksum']) {
-    console.error('Server-side React render was discarded. Make sure that your initial render does not contain any client-side code.');
+    console.error('服务器端 React render 被丢弃. 请确保您最初的渲染不包含任何客户端代码.');
   }
 }

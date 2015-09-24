@@ -5,13 +5,13 @@ export default function update(req) {
     // write to database
     setTimeout(() => {
       if (Math.floor(Math.random() * 5) === 0) {
-        reject('Oh no! Widget save fails 20% of the time. Try again.');
+        reject('Oh no! 窗口小部件保存失败的20％的时间。 再试一次.');
       } else {
         const widgets = load(req);
         const widget = req.body;
         if (widget.color === 'Green') {
           reject({
-            color: 'We do not accept green widgets' // example server-side validation error
+            color: '我们不接受绿色小工具' // example server-side validation error
           });
         }
         if (widget.id) {

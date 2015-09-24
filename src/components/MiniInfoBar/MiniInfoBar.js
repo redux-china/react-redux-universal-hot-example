@@ -11,7 +11,7 @@ export default class MiniInfoBar extends Component {
     const {time} = this.props;
     return (
       <div className="mini-info-bar">
-        The info bar was last loaded at
+        这个信息最后加载...
         {' '}
         <span>{time && new Date(time).toString()}</span>
       </div>

@@ -1,7 +1,7 @@
 export default function loadInfo() {
   return new Promise((resolve) => {
     resolve({
-      message: 'This came from the api server',
+      message: '这来自API服务器',
       time: Date.now()
     });
   });

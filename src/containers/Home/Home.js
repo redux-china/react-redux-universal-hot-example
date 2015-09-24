@@ -21,9 +21,9 @@ export default class Home extends Component {
             <h2>在一个实例中的所有现代化的最佳实践.</h2>
 
             <p>
-              <a className={styles.github} href="https://github.com/erikras/react-redux-universal-hot-example"
+              <a className={styles.github} href="https://github.com/redux-china"
                  target="_blank">
-                <i className="fa fa-github"/> View on Github
+                <i className="fa fa-github"/> View onmi Github
               </a>
             </p>
             <GithubButton user="erikras"
