@@ -16,7 +16,7 @@ export default class Home extends Component {
                 <img src={logoImage}/>
               </p>
             </div>
-            <h1>React Redux Example</h1>
+            <h1>React Redux 演示</h1>
 
             <h2>在一个实例中的所有现代化的最佳实践.</h2>
 

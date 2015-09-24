@@ -14,7 +14,7 @@ describe('InfoBar', () => {
       loaded: true,
       loading: false,
       data: {
-        message: 'This came from the api server',
+        message: '这来自API服务器',
         time: Date.now()
       }
     }

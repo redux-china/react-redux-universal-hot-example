@@ -30,7 +30,7 @@ export default class Survey extends Component {
   render() {
     return (
       <div className="container">
-        <h1>调查:</h1>
+        <h1>表单提交:</h1>
         <DocumentMeta title="React Redux Example: Survey"/>
         <div style={{textAlign: 'center', margin: 15}}>
           <button className="btn btn-primary" onClick={::this.handleInitialize}>
